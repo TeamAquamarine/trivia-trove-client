@@ -77,6 +77,7 @@ root\
 - **8/13/18 10:00 am** - Add wireframes
 - **8/13/18 11:40 am** - Add GROUP-AGREEMENT and problem domain model
 - **8/13/18 12:20 pm** - Update README with file structure outline, change log and getting started sections. 
+- **8/13/18 12:40 pm** - File structure scaffolding
 
 
 
