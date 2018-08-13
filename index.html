@@ -5,10 +5,199 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Trivia Trove</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/layout.css">
+  <link rel="stylesheet" href="./style/theme.css">
+  <link rel="stylesheet" href="./style/state.css">
+
+  <!-- Application Templates -->
+  <script type="text/x-handlebars-template" id="play-template">
+    
+    <aside id="score">
+      {{current-score}}
+    </aside>
+    <h3>
+      {{question}}
+    </h3>
+    <h4>
+      {{answer-1}}
+    </h4>
+    <h4>
+      {{answer-2}}
+    </h4>
+    <h4>
+      {{answer-3}}
+    </h4>
+    <h4>
+      {{answer-4}}
+    </h4>
+
+  </script>
+
+  <script type="text/x-handlebars-template" id="highscore-template">
+    <tr>
+      <td>{{initials}}</td>
+      <td>{{category}}</td>
+      <td>{{highscore}}</td>
+    </tr>
+  </script>
+
 </head>
 
 <body>
+  <div class="grid">
+
+    <header>
+      <img id="logo" src="" alt="Logo">
+      <nav>
+        <ul id="navbar">
+          <li id="home">
+            <a href="./">HOME</a>
+          </li>
+          <li id="create">
+            <a href="./create">CREATE</a>
+          </li>
+          <li id="highscore">
+            <a href="./highscore">HIGHSCORE</a>
+          </li>
+          <li id="about-us">
+            <a href="./about-us">ABOUT US</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container" id="home-view"></section>
+
+    <aside class="left" class="big-logo"></aside>
+
+    <div id="center">I will put API-based dropdowns here
+      <form>
+        <select id="category-select"></select>
+        <select id="difficulty-select"></select>
+        <select id="question-number-select">
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="right">I will put custom dropdown here
+      <form>
+        <select id="custom-select"></select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <section class="container" id="play-view"></section>
+
+    <section class="container" id="highscore-view"></section>
+    <table id="highscore">Highscore Table
+      <th id="highscore-header">
+        <td>Initials</td>
+        <td>Category</td>
+        <td>Score</td>
+      </th>
+      <td>
+        <input type="text">
+        <input>
+      </td>
+
+    </table>
+    <section class="container" id="create-view"></section>
+
+    <h2 id="quiz-name">Quiz Name</h2>
+    <h2 id="quiz-name-input">
+      <input type="text"></input>
+    </h2>
+    <form id="create-quiz-form">
+      <label>Question
+        <input type="text" id="create-question">
+      </label>
+      <label>Correct Answer
+        <input type="text" id="create-correct">
+      </label>
+      <label>Incorrect Answer1
+        <input type="text" id="create-incorrect1">
+      </label>
+      <label>Incorrect Answer2
+        <input type="text" id="create-incorrect2">
+      </label>
+      <label>Incorrect Answer3
+        <input type="text" id="create-incorrect3">
+      </label>
+      <button type="submit" id="submit-question"></button>
+    </form>
+    <button type="button" id="submit-quiz"></button>
+
+    <section class="container" id="about-us-view"></section>
+
+    <section>
+      <img class="talk-bubble">
+      <img class="chest">
+      <ul>
+        <li>
+          <a href="http://github.com">github</a>
+        </li>
+        <li>
+          <a href="http://linkedin.com">linkedin</a>
+        </li>
+      </ul>
+    </section>
+
+
+    <img class="talk-bubble">
+    <img class="chest">
+    <ul>
+      <li>
+        <a href="http://github.com">github</a>
+      </li>
+      <li>
+        <a href="http://linkedin.com">linkedin</a>
+      </li>
+    </ul>
+    </section>
+
+
+    <img class="talk-bubble">
+    <img class="chest">
+    <ul>
+      <li>
+        <a href="http://github.com">github</a>
+      </li>
+      <li>
+        <a href="http://linkedin.com">linkedin</a>
+      </li>
+    </ul>
+    </section>
+
+    <footer>
+      <p>copyright</p>
+      <ul id="footer-links">
+        <li id="twitter">
+          <a href="./">TWITTER</a>
+        </li>
+        <li id="facebook">
+          <a href="./">FACEBOOK</a>
+        </li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="./scripts/models/quiz.js"></script>
+  <script src="./scripts/views/quiz-view.js"></script>
+  <script src="./scripts/models/highscore.js"></script>
+  <script src="./scripts/views/highscore-view.js"></script>
+  <script src="./scripts/controllers/routes.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.js"></script>
 </body>
