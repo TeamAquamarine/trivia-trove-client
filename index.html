@@ -5,10 +5,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Trivia Trove</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/layout.css">
+  <link rel="stylesheet" href="./style/theme.css">
+  <link rel="stylesheet" href="./style/state.css">
+
+  <!-- Application Templates -->
+  <script type="text/x-handlebars-template" id="play-template">
+    
+    <aside id="score">
+      {{current-score}}
+    </aside>
+    <h3>
+      {{question}}
+    </h3>
+    <h4>
+      {{answer-1}}
+    </h4>
+    <h4>
+      {{answer-2}}
+    </h4>
+    <h4>
+      {{answer-3}}
+    </h4>
+    <h4>
+      {{answer-4}}
+    </h4>
+  </script>
+
 </head>
 
 <body>
+  <div class="grid">
+
+    <header>
+      <img id="logo" src="" alt="Logo">
+      <nav>
+        <ul id="navbar">
+          <li id="home">
+            <a href="./">HOME</a>
+          </li>
+          <li id="create">
+            <a href="./create">CREATE</a>
+          </li>
+          <li id="highscore">
+            <a href="./highscore">HIGHSCORE</a>
+          </li>
+          <li id="about-us">
+            <a href="./about-us">ABOUT US</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container" id="home-view"></section>
+
+    <section class="container" id="play-view"></section>
+
+    <section class="container" id="highscore-view"></section>
+
+    <section class="container" id="create-view"></section>
+
+    <section class="container" id="about-us-view"></section>
+
+    <footer>
+      <p>copyright</p>
+      <ul id="footer-links">
+        <li id="twitter">
+          <a href="./">HOME</a>
+        </li>
+        <li id="facebook">
+          <a href="./">CREATE</a>
+        </li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="./scripts/models/quiz.js"></script>
+  <script src="./scripts/views/quiz-view.js"></script>
+  <script src="./scripts/models/highscore.js"></script>
+  <script src="./scripts/views/highscore-view.js"></script>
+  <script src="./scripts/controllers/routes.js"></script>
 
 </body>
 
