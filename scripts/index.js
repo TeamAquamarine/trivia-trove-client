@@ -5,6 +5,7 @@ var app = app || {};
 (function (module) {
 
 
+
   module.showOnly = selector => {
     $('.container').hide();
     $(selector).show();
