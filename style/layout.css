@@ -1,9 +1,12 @@
 .container {
   display:none;
   float: left;
+  margin: auto;
 }
 #home-view{
   display: block;
+  float: left;
+  margin: top 2em;
 }
 
 body {
@@ -15,10 +18,12 @@ body {
 header {
   height: 150px;
   text-align: center;
+  clear: both;
 }
 
 footer {
   height: 100px;
   line-height: 100px;
+  
 }
 
