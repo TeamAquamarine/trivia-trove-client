@@ -22,10 +22,10 @@ var app = app || {};
 
     $('#play-api-form').on('submit', () => {
       event.preventDefault();
-      let category = $('#category-select option:selected').val();
-      let difficulty = $('#difficulty-select option:selected').val();
-      let amount = $('#question-number-select option:selected').val();
-      location.replace(`/play/${amount}/${category}/${difficulty}`);
+      let cat_id = $('#category-select option:selected').val(),
+        diff = $('#difficulty-select option:selected').val(),
+        amount = $('#question-number-select option:selected').val();
+      page(`/play/${amount}/${cat_id}/${diff}`);
     })
 
 
