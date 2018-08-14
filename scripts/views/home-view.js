@@ -9,7 +9,7 @@ var app = app || {};
 
     //Add function here to populate the options for quiz categories
     ctx.forEach(category => {
-      let $option = `<option value=${category[0]}>${category[0]}</option>`;
+      let $option = `<option value=${category[1]}>${category[1]}</option>`;
       $('#category-select').append($option);
     }
 
