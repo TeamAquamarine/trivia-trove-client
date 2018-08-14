@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./style/normalize.css">
   <link rel="stylesheet" href="./style/base.css">
   <link rel="stylesheet" href="./style/layout.css">
+  <link rel="stylesheet" href="./style/modules/header.css">
   <link rel="stylesheet" href="./style/theme.css">
   <link rel="stylesheet" href="./style/state.css">
   <link rel="stylesheet" href="./style/vendor/icons.css">
@@ -54,30 +55,27 @@
   </script>
 
 </head>
-
 <body>
-  <div class="grid">
-
-    <header>
-      <img id="logo" src="" alt="Logo">
-      <nav>
-        <ul id="navbar">
-          <li id="home">
-            <a href="./">HOME</a>
-          </li>
-          <li id="create">
-            <a href="./create">CREATE</a>
-          </li>
-          <li id="highscore">
-            <a href="./highscore">HIGHSCORE</a>
-          </li>
-          <li id="about-us">
-            <a href="./about-us">ABOUT US</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+  <header>
+    <img id="logo" src="img/logo.png" alt="Logo">
+    <nav>
+      <ul id="navbar">
+        <li id="home">
+          <a href="./">HOME</a>
+        </li>
+        <li id="create">
+          <a href="./create">CREATE</a>
+        </li>
+        <li id="highscore">
+          <a href="./highscore">HIGHSCORE</a>
+        </li>
+        <li id="about-us">
+          <a href="./about-us">ABOUT US</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
     <section id="error-view" class="container">
 
     </section>
@@ -155,6 +153,59 @@
         </label>
         <button type="submit" id="submit-question"></button>
       </form>
+      </div>
+
+      <div id="right">I will put custom dropdown here
+        <form>
+          <select id="custom-select"></select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container" id="play-view">
+
+    </section>
+
+    <section class="container" id="highscore-view">
+      <table id="highscore">Highscore Table
+        <th id="highscore-header">
+          <td>Initials</td>
+          <td>Category</td>
+          <td>Score</td>
+        </th>
+        <td>
+          <input type="text">
+          <input>
+        </td>
+
+      </table>
+    </section>
+
+    <section class="container" id="create-view">
+
+      <h2 id="quiz-name">Quiz Name</h2>
+      <h2 id="quiz-name-input">
+        <input type="text">
+      </h2>
+      <form id="create-quiz-form">
+        <label>Question
+          <input type="text" id="create-question">
+        </label>
+        <label>Correct Answer
+          <input type="text" id="create-correct">
+        </label>
+        <label>Incorrect Answer1
+          <input type="text" id="create-incorrect1">
+        </label>
+        <label>Incorrect Answer2
+          <input type="text" id="create-incorrect2">
+        </label>
+        <label>Incorrect Answer3
+          <input type="text" id="create-incorrect3">
+        </label>
+        <button type="submit" id="submit-question"></button>
+      </form>
       <button type="button" id="submit-quiz"></button>
 
     </section>
@@ -201,20 +252,19 @@
       </section>
 
     </section>
-
-    <footer>
-      <p>copyright</p>
-      <ul id="footer-links">
-        <li id="twitter">
-          <a href="./">TWITTER</a>
-        </li>
-        <li id="facebook">
-          <a href="./">FACEBOOK</a>
-        </li>
-      </ul>
-    </footer>
-
-  </div>
+    </section>
+  </main>
+  <footer>
+    <p>copyright</p>
+    <ul id="footer-links">
+      <li id="twitter">
+        <a href="./">TWITTER</a>
+      </li>
+      <li id="facebook">
+        <a href="./">FACEBOOK</a>
+      </li>
+    </ul>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
