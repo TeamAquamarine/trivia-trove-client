@@ -6,12 +6,14 @@ var app = app || {};
 
   const aboutUsView = {};
 
-  module.initAboutUsView = () => {
+  aboutUsView.initAboutUsView = () => {
     module.showOnly('#about-us-view');
 
-    $('.chest').on('click', () => {
-      $('#talk-bubble').hide();
-      $(this).siblings().show();
+    $('.talk-bubble').css('visibility','hidden');
+
+    $('.chest').on('click', function() {
+      $('.talk-bubble').css('visibility','hidden');
+      $(this).siblings().css('visibility','visible');
     })    
   };
 
