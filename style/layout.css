@@ -1,24 +1,18 @@
 .container {
   display:none;
-  float: left;
   margin: auto;
-}
-#home-view{
-  display: block;
-  float: left;
-  margin: top 2em;
 }
 
 body {
   max-width: 100%;
-  /* position: relative; */
+  position: relative;
   margin: auto;
 }
 
 header {
   height: 150px;
   text-align: center;
-  clear: both;
+  margin-bottom: 50px;
 }
 
 footer {

@@ -22,6 +22,7 @@ nav li {
     background-color: #c61055;
     float: left;
     width: 100%;
+    clear: both;
     /* height: 40px; */
   }
   

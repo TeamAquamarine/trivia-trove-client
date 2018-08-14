@@ -1,0 +1,9 @@
+#about-us-view section{
+  float:left;
+  max-width: 30%;
+  margin-left: 2%;
+}
+
+#about-us-view img{
+  max-width: 100%;
+}

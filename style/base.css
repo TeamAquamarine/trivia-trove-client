@@ -13,8 +13,6 @@ body {
 }
 
 header {
-  float: left;
-  clear:both;
   background-color: white;
   top: 0;
   margin: auto;
