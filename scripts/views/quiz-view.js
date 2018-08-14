@@ -9,6 +9,7 @@ var app = app || {};
   quizView.initQuizView = (ctx) => {
     module.showOnly('#play-view');
     console.log(ctx);
+
   }
 
   module.quizView = quizView;
