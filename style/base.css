@@ -1,0 +1,33 @@
+/* colors: 
+pink #c61055
+green #349eo5
+blue #228dac
+yellow #ffael8
+purple #694668
+grey text #414141 */
+
+body {
+  background-color: #fff;
+  font-family: 'helvetica';
+  color: #414141;
+}
+
+header {
+  float: left;
+  clear:both;
+  background-color: white;
+  top: 0;
+  margin: auto;
+}
+footer {
+  width: 100%;
+  background-color: #414141;
+}
+
+button {
+  background-color: #c61055;
+  color: #ddd;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+}

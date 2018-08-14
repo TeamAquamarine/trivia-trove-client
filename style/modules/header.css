@@ -1,4 +1,39 @@
 #logo {
-  max-width:40%;
+  max-width: 30%;
   margin: auto;
   }
+
+/* nav {
+  display: none;
+  background-color: #c61055;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+nav li {
+  padding: 2vw 4vw;
+} */
+
+@media screen and (min-width: 768px){
+  nav {
+    background-color: #c61055;
+    float: left;
+    width: 100%;
+    /* height: 40px; */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ddd;
+  }
+  
+  nav li {
+    /* list-style-type:none; */
+    background-color: #c61055;
+    display: inline-block;
+    padding: 2vw 4vw;
+  }
+}

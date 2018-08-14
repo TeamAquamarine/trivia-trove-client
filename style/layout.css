@@ -1,0 +1,24 @@
+.container {
+  display:none;
+  float: left;
+}
+#home-view{
+  display: block;
+}
+
+body {
+  max-width: 100%;
+  /* position: relative; */
+  margin: auto;
+}
+
+header {
+  height: 150px;
+  text-align: center;
+}
+
+footer {
+  height: 100px;
+  line-height: 100px;
+}
+
