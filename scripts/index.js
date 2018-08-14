@@ -11,8 +11,10 @@ var app = app || {};
     $(selector).show();
   };
 
-  // do we want this?
-  // module.render = (templateId, data) => {
-  //
-  //}
+  module.render = (templateId, data) => {
+    let template = Handlebars.compile(`${templateId}`).text();
+
+    return template(data);
+  };
+
 })(app);
