@@ -8,7 +8,9 @@ var app = app || {};
 
   quizView.initQuizView = (ctx) => {
     module.showOnly('#play-view');
-    console.log(ctx);
+    ctx.forEach(element => {
+      console.log(element);
+    });
 
   }
 
