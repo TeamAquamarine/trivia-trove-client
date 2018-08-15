@@ -1,26 +1,9 @@
 #about-us-view section{
-  /* float:left; */
   max-width: 30%;
   margin-left: 2%;
-  position: relative;
+  float: left;
 }
 
 #about-us-view img{
   max-width: 100%;
-}
-
-#about-alex {
-  float: left;
-  clear: both;
-}
-
-#about-sharon {
-  float: left;
-  clear: both;
-}
-
-#about-connor {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
