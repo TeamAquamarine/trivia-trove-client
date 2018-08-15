@@ -22,14 +22,19 @@
   <script type="text/x-handlebars-template" id="play-template">
     
     <aside id="score">
-      {{current-score}}
+      {{userScore}}
     </aside>
-    <h3>
-      {{question}}
-    </h3>
-    <h4>
-      {{answer}}
-    </h4>
+    {{#list questions}}
+      <div id="{{@index}}">
+        <h3>
+          {{{question}}}
+        </h3>
+        {{#list possibleAnswers}}
+            {{{this}}}
+        {{/list}}
+      </div>
+    {{/list}}
+
     <!-- <h4>
       {{answer-2}}
     </h4>
@@ -164,7 +169,7 @@
     </section>
 
     <section class="container" id="play-view">
-      
+
     </section>
 
     <section class="container" id="highscore-view">
@@ -255,7 +260,7 @@
     </section>
   </main>
   <footer>
-    <p>	&copy;Triva Trove </p>
+    <p> &copy;Triva Trove </p>
     <ul id="footer-links">
       <li id="twitter">
         <a href="./">TWITTER</a>

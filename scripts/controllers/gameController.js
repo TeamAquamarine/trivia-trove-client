@@ -13,7 +13,7 @@ var app = app || {};
       localStorage.questionNumber = 0;
     }
     console.log(this.quiz.questions[localStorage.questionNumber]);
-    let questionHtml = module.render('play-template', this.quiz.questions[localStorage.questionNumber]);
+    let questionHtml = module.render('play-template', this.quiz);
     $('#play-view').append(questionHtml);
 
 
