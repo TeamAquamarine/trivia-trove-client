@@ -8,7 +8,7 @@ var app = app || {};
 
   gameController.createQuiz = function() {
     this.quiz = new module.Quiz(module.Question.all);
-
+console.log(!localStorage.questionNumber);
     if (!localStorage.questionNumber) {
       localStorage.questionNumber = 0;
     }

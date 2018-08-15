@@ -11,7 +11,7 @@ var app = app || {};
   }
 
   Quiz.prototype.incrementScore = function () {
-    this.userScore++;
+    this.userScore += 132;
   };
 
   module.Quiz = Quiz;
