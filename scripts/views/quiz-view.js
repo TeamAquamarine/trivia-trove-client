@@ -8,9 +8,10 @@ var app = app || {};
 
   quizView.initQuizView = (ctx) => {
     module.showOnly('#play-view');
-    console.log(ctx);
-    $.get(`https://opentdb.com/api.php?amount=${ctx.params.amount}&category=${ctx.params.cat_id}&difficulty=${ctx.params.diff}&type=multiple`)
-      .then(res => console.log(res));
+    ctx.forEach(element => {
+      console.log(element);
+    });
+
   }
 
   module.quizView = quizView;
