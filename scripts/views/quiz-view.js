@@ -6,13 +6,10 @@ var app = app || {};
 
   const quizView = {};
 
-  quizView.initQuizView = (ctx) => {
+  quizView.initQuizView = () => {
     module.showOnly('#play-view');
-    ctx.forEach(element => {
-      console.log(element);
-    });
 
-  }
+  };
 
   module.quizView = quizView;
 })(app);

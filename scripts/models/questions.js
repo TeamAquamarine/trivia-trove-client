@@ -35,8 +35,8 @@ var app = app || {};
   Question.fetchQuestions = (ctx) => {
     $.get(`https://opentdb.com/api.php?amount=${ctx.params.amount}&category=${ctx.params.cat_id}&difficulty=${ctx.params.diff}&type=multiple`)
       .then(res => Question.loadAll(res.results))
+      .then(() => page('/play'))
       .catch(err => console.error(err));
-    // .then(res => module.quizView.initQuizView(res.results))
   }
 
   module.Question = Question;
