@@ -22,14 +22,20 @@
   <script type="text/x-handlebars-template" id="play-template">
     
     <aside id="score">
-      {{current-score}}
+      {{userScore}}
     </aside>
-    <h3>
-      {{question}}
-    </h3>
-    <h4>
-      {{answer}}
-    </h4>
+    {{#list questions}}
+      <div id="{{@index}}">
+        <h3>
+          {{{question}}}
+        </h3>
+        {{#answers possibleAnswers}}
+            {{{this}}}
+        {{/answers}}
+      </div>
+    {{/list}}
+    <button type="submit">Submit Answer</button>
+
     <!-- <h4>
       {{answer-2}}
     </h4>
@@ -164,7 +170,7 @@
     </section>
 
     <section class="container" id="play-view">
-      
+
     </section>
 
     <section class="container" id="highscore-view">
@@ -255,7 +261,7 @@
     </section>
   </main>
   <footer>
-    <p>	&copy;Triva Trove </p>
+    <p> &copy;Triva Trove </p>
     <ul id="footer-links">
       <li id="twitter">
         <a href="./">TWITTER</a>
@@ -281,6 +287,7 @@
   <script src="./scripts/views/error-view.js"></script>
   <script src="./scripts/controllers/routes.js"></script>
   <script src="./scripts/views/about-us-view.js"></script>
+  <script src="./scripts/controllers/gameController.js"></script>
 
 </body>
 
