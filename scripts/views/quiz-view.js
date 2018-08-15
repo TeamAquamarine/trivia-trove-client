@@ -8,6 +8,7 @@ var app = app || {};
 
   quizView.initQuizView = () => {
     module.showOnly('#play-view');
+    module.gameController.createQuiz();
 
   };
 
