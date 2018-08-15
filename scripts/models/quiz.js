@@ -9,11 +9,11 @@ var app = app || {};
     this.questions = questionArr;
     this.userScore = 0;
   }
-  
-  Quiz.prototype.incrementScore = function (){
+
+  Quiz.prototype.incrementScore = function () {
     this.userScore++;
   };
-  
+
   module.Quiz = Quiz;
 
 })(app);
