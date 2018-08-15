@@ -9,8 +9,6 @@ var app = app || {};
     Object.keys(questionData).forEach(key => this[key] = questionData[key]);
   }
 
-  Quiz.all = [];
-
   module.Quiz = Quiz;
 
 })(app);
