@@ -16,6 +16,11 @@ var app = app || {};
     let questionHtml = module.render('play-template', this.quiz);
     $('#play-view').append(questionHtml);
 
+    module.gameController.showQuestion();
+  }
+  gameController.showQuestion = function() {
+    $(`#play-view li`).siblings().hide();
+    $(`#play-view div[id ="${localStorage.questionNumber}"]`).parent().fadeIn();
 
   }
   //create the quiz
