@@ -5,9 +5,10 @@ var app = app || {};
 // QUIZ MODEL SKELETON, FEEL FREE TO CHANGE -CC
 (function (module) {
 
-  function Quiz(questionArr) {
+  function Quiz(questionArr, category, userScore) {
     this.questions = questionArr;
-    this.userScore = 0;
+    this.userScore = category;
+    this.userScore = userScore || 0;
   }
 
   Quiz.prototype.incrementScore = function () {
