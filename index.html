@@ -9,6 +9,7 @@
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="/style/vendor/icons.css">
   <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700|Itim|Signika:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./style/base.css">
   <link rel="stylesheet" href="./style/layout.css">
@@ -27,6 +28,7 @@
     <aside id="score">
       <h3>Score</h3>{{userScore}}
     </aside>
+    <div id="question-wrapper">
     {{#list questions}}
       <div id="{{@index}}">
         <h3>
@@ -37,8 +39,8 @@
         {{/answers}}
       </div>
     {{/list}}
-    <button type="submit">Submit Answer</button>
-
+    <button id = "submit-answer" type="submit">Submit Answer</button>
+  </div>
   </script>
 
   <script type="text/x-handlebars-template" id="highscore-template">
@@ -178,23 +180,23 @@
         <img class="chest" src="img/connor-trunk.png" alt="blue chest with Connor Crossley written on open lid">
         <ul>
           <li>
-            <a href="https://github.com/Concross">github</a>
+            <a href="https://github.com/conncross"><i class="icon-github"></i> </a>
           </li>
           <li>
-            <a href="http://linkedin.com">linkedin</a>
+            <a href="https://www.linkedin.com/in/connorcrossley/"><i class="icon-linkedin2"></i></a>
           </li>
         </ul>
       </section>
 
       <section id="about-sharon">
         <img class="talk-bubble" src="/img/sharon-bubble.png" alt="pink talk bubble with Sharon's headshot">
-        <img class="chest" src="img/sharon-trunk.png" alt="pink chest with Sharon Miller written on open lid">
+        <img class="chest" src="img/sharon_trunk.png" alt="pink chest with Sharon Miller written on open lid">
         <ul>
           <li>
-            <a href="https://github.com/SharonMiller">github</a>
+            <a href="https://github.com/SharonMiller"><i class="icon-github"></i> </a>
           </li>
           <li>
-            <a href="http://linkedin.com">linkedin</a>
+            <a href="https://www.linkedin.com/in/millersharonk/"><i class="icon-linkedin2"></i></a>
           </li>
         </ul>
       </section>
@@ -203,11 +205,10 @@
         <img class="talk-bubble" src="/img/alex-bubble.png" alt="blue talk bubble with Alex's headshot">
         <img class="chest" src="img/alex-trunk.png" alt="green chest with Alex Hanson written on open lid">
         <ul>
-          <li>
-            <a href="https://github.com/alexlhanson">github</a>
+          <li><a href="https://github.com/alexlhanson"><i class="icon-github"></i> </a></li>
           </li>
           <li>
-            <a href="http://linkedin.com">linkedin</a>
+            <a href="https://www.linkedin.com/in/alex-hanson1/"><i class="icon-linkedin2"></i> </a>
           </li>
         </ul>
       </section>
@@ -217,14 +218,13 @@
   </main>
   <footer>
     <p> &copy;Triva Trove </p>
-    <ul id="footer-links">
-      <li id="twitter">
-        <a href="./">TWITTER</a>
-      </li>
-      <li id="facebook">
-        <a href="./">FACEBOOK</a>
-      </li>
-    </ul>
+    <aside class="social-links">
+      <ul>
+        <li><i class="icon-mail2"><a href=""></a></i></li>
+        <li><i class="icon-twitter"><a href=""></a></i></li>
+        <li><i class="icon-github"><a href=""></a></i></li>
+      </ul>
+    </aside>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
