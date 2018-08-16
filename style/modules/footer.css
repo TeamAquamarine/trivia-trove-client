@@ -1,12 +1,13 @@
 footer ul {  
   position: absolute;
   top: 20px; 
-  left: 46%;
+  right: 12%;
 }
 
 footer li {
   display: inline-block;;
 }
+
 footer a {
   text-decoration: none;
   color: #ddd;
@@ -16,7 +17,4 @@ footer p {
 position: absolute;
 top: 20px;
 left: 5%;
-}
-footer{
-clear: both;
 }

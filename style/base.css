@@ -10,13 +10,11 @@ grey text #414141 */
 font-family: 'Itim', cursive;
 font-family: 'Averia Serif Libre', cursive; */
 html {
-  position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 body {
   background-color: #fff;
   color: #414141;
-  position: relative;
   font-family: 'Signika', sans-serif;
 }
 
