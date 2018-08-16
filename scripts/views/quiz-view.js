@@ -16,19 +16,28 @@ var app = app || {};
       $(this).addClass('isSelected');
     });
 
-    $('#play-view button[type="submit"]').on('click', function (event) {
+    $('#play-view button[type="submit"]').on('click', function (event) {      
       event.preventDefault();
       
-      var isCorrect = $('.isSelected').text().trim() === module.gameController.quiz.questions[localStorage.questionNumber].correct_answer;
-      if ($('.isSelected').length && isCorrect) {
-        module.gameController.quiz.incrementScore();
-        $('.answerButton').removeClass('isSelected');
-        localStorage.questionNumber = JSON.parse(localStorage.questionNumber) + 1;
-        module.gameController.showQuestion();
-        if (localStorage.questionNumber === module.gameController.quiz.questions.length){
+      //Validate answer has been selected and following game logic steps
+      if ($('.isSelected').length) {
 
+        //If question is answered correctly
+        let isCorrect = $('.isSelected').text().trim() === module.gameController.quiz.questions[localStorage.questionNumber].correct_answer;
+        if (isCorrect){
+          module.gameController.quiz.incrementScore();
         }
-      };
+
+        localStorage.questionNumber = JSON.parse(localStorage.questionNumber) + 1;
+        
+        if (localStorage.questionNumber == module.gameController.quiz.questions.length){
+          localStorage.removeItem('questionNumber');
+          page('/highscore');
+        } else {
+          $('.answerButton').removeClass('isSelected');
+          module.gameController.showQuestion();
+          };
+        }
     })
 
   };

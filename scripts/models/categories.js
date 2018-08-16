@@ -20,7 +20,7 @@ var app = app || {};
     .map(category => new Categories(category));
 
   Categories.fetchAll = callback => {
-    $.get(`http://localhost:3000/api/v1/categories`)
+    $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/categories`)
       .then(res => Categories.loadAll(res))
       .then(callback)
       .catch(errorCallback);
