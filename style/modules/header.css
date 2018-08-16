@@ -6,6 +6,9 @@
 nav {
   /* display: none; */
   background-color: #c61055;
+  margin-bottom: 10px;
+  font-family: 'Itim', cursive;
+  font-size:10px;
 } 
  nav a {
   text-decoration: none;
@@ -13,7 +16,7 @@ nav {
 }
 
 nav li {
-  padding: 2vw 4vw;
+  padding: 1vw 2vw;
   list-style-type: none;  
 } 
 
@@ -22,6 +25,7 @@ nav li {
     padding: .1em .1em .1em 2em;
     float: none;
   }
+ 
   .icon-menu {
     font-size: 3em;
     float: right;
@@ -29,10 +33,10 @@ nav li {
   
   nav {
     background-color: #c61055;
-    /* float: left;
+    float: left;
     width: 100%;
-    clear: both; */
-    /* height: 40px; */
+    clear: both;
+    font-size: 25px;
   }
   
   nav a {
