@@ -4,7 +4,7 @@ var app = app || {};
 
 (function (module) {
 
-  let prodApiUrl = 'https://secure-oasis-88504.herokuapp.com/';
+  let prodApiUrl = 'https://secure-oasis-88504.herokuapp.com';
   let devApiUrl = 'http://localhost:3000';
 
   module.isProduction = /^(?!localhost|127)/.test(window.location.hostname);
