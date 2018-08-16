@@ -1,0 +1,17 @@
+
+#create-view {
+  max-width: 30%;
+  margin-left: 2%;
+  float: left;
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+#quiz-question{
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+}
+
+
+

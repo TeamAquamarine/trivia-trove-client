@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trivia Trove</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/layout.css">
+  <link rel="stylesheet" href="./style/modules/header.css">
+  <link rel="stylesheet" href="./style/theme.css">
+  <link rel="stylesheet" href="./style/state.css">
+  <link rel="stylesheet" href="./style/vendor/icons.css">
+  <link rel="stylesheet" href="./style/modules/about-us-view.css">
+  <link rel="stylesheet" href="./style/modules/footer.css">
+  <link rel="stylesheet" href="./style/modules/create.css">
+  <!-- Application Templates -->
+  <script type="text/x-handlebars-template" id="play-template">
+    
+    <aside id="score">
+      {{userScore}}
+    </aside>
+    {{#list questions}}
+      <div id="{{@index}}">
+        <h3>
+          {{{question}}}
+        </h3>
+        {{#answers possibleAnswers}}
+            {{{this}}}
+        {{/answers}}
+      </div>
+    {{/list}}
+    <button type="submit">Submit Answer</button>
+
+    <!-- <h4>
+      {{answer-2}}
+    </h4>
+    <h4>
+      {{answer-3}}
+    </h4>
+    <h4>
+      {{answer-4}}
+    </h4> -->
+
+  </script>
+
+  <script type="text/x-handlebars-template" id="highscore-template">
+    <tr>
+      <td>{{initials}}</td>
+      <td>{{category}}</td>
+      <td>{{highscore}}</td>
+    </tr>
+  </script>
+
+  <script type="text/x-handlebars-template" id="error-view-template">
+    <h2>Oh no! Something went wrong :(</h2>
+    <p>{{status}}: {{statusText}}</p>
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="img/logo.png" alt="Logo">
+    <nav>
+      <ul id="navbar">
+        <li id="home">
+          <a href="./">HOME</a>
+        </li>
+        <li id="create">
+          <a href="./create">CREATE</a>
+        </li>
+        <li id="highscore">
+          <a href="./highscore">HIGHSCORE</a>
+        </li>
+        <li id="about-us">
+          <a href="./about-us">ABOUT US</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="error-view" class="container">
+
+    </section>
+
+    <section class="container" id="home-view">
+      <aside class="left" class="big-logo"></aside>
+
+      <div id="center">I will put API-based dropdowns here
+        <form id="play-api-form">
+          <select id="category-select"></select>
+          <select id="difficulty-select">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <select id="question-number-select">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="right">I will put custom dropdown here
+        <form>
+          <select id="custom-select"></select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container" id="play-view">
+
+    </section>
+
+    <section class="container" id="highscore-view">
+      <table id="highscore">Highscore Table
+        <th id="highscore-header">
+          <td>Initials</td>
+          <td>Category</td>
+          <td>Score</td>
+        </th>
+        <td>
+          <input type="text">
+          <input>
+        </td>
+
+      </table>
+    </section>
+
+    <section class="container" id="create-view">
+
+      <h2 id="quiz-name">Quiz Name</h2>
+      <h2 id="quiz-name-input">
+        <input type="text"></input>
+      </h2>
+      <form id="create-quiz-form">
+        <label>Question
+          <input type="text" id="create-question">
+        </label>
+        <label>Correct Answer
+          <input type="text" id="create-correct">
+        </label>
+        <label>Incorrect Answer1
+          <input type="text" id="create-incorrect1">
+        </label>
+        <label>Incorrect Answer2
+          <input type="text" id="create-incorrect2">
+        </label>
+        <label>Incorrect Answer3
+          <input type="text" id="create-incorrect3">
+        </label>
+        <button type="submit" id="submit-question"></button>
+      </form>
+      </div>
+
+      <div id="right">I will put custom dropdown here
+        <form>
+          <select id="custom-select"></select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container" id="play-view">
+
+    </section>
+
+    <section class="container" id="highscore-view">
+      <table id="highscore">Highscore Table
+        <th id="highscore-header">
+          <td>Initials</td>
+          <td>Category</td>
+          <td>Score</td>
+        </th>
+        <td>
+          <input type="text">
+          <input>
+        </td>
+
+      </table>
+    </section>
+
+    <section class="container" id="create-view">
+
+      <h2 id="quiz-name">Quiz Name</h2>
+      <h2 id="quiz-name-input">
+        <input type="text">
+      </h2>
+      <form id="create-quiz-form">
+        <label id="quiz-question">Question
+          <input type="text" id="create-question">
+        </label>
+        <label>Correct Answer
+          <input type="text" id="create-correct">
+        </label>
+        <label>Incorrect Answer1
+          <input type="text" id="create-incorrect1">
+        </label>
+        <label>Incorrect Answer2
+          <input type="text" id="create-incorrect2">
+        </label>
+        <label>Incorrect Answer3
+          <input type="text" id="create-incorrect3">
+        </label>
+        <button type="submit" id="submit-question"></button>
+      </form>
+      <button type="button" id="submit-quiz"></button>
+
+    </section>
+
+    <section class="container" id="about-us-view" class="flex-1">
+
+      <section id="about-connor">
+        <img class="talk-bubble" src="/img/connor-bubble.png" alt="green talk bubble with Connor's headshot">
+        <img class="chest" src="img/connor-trunk.png" alt="blue chest with Connor Crossley written on open lid">
+        <ul>
+          <li>
+            <a href="https://github.com/Concross">github</a>
+          </li>
+          <li>
+            <a href="http://linkedin.com">linkedin</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about-sharon">
+        <img class="talk-bubble" src="/img/sharon-bubble.png" alt="pink talk bubble with Sharon's headshot">
+        <img class="chest" src="img/sharon-trunk.png" alt="pink chest with Sharon Miller written on open lid">
+        <ul>
+          <li>
+            <a href="https://github.com/SharonMiller">github</a>
+          </li>
+          <li>
+            <a href="http://linkedin.com">linkedin</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about-alex">
+        <img class="talk-bubble" src="/img/alex-bubble.png" alt="blue talk bubble with Alex's headshot">
+        <img class="chest" src="img/alex-trunk.png" alt="green chest with Alex Hanson written on open lid">
+        <ul>
+          <li>
+            <a href="https://github.com/alexlhanson">github</a>
+          </li>
+          <li>
+            <a href="http://linkedin.com">linkedin</a>
+          </li>
+        </ul>
+      </section>
+
+    </section>
+    </section>
+  </main>
+  <footer>
+    <p> &copy;Triva Trove </p>
+    <ul id="footer-links">
+      <li id="twitter">
+        <a href="./">TWITTER</a>
+      </li>
+      <li id="facebook">
+        <a href="./">FACEBOOK</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.js"></script>
+
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/models/categories.js"></script>
+  <script src="./scripts/views/home-view.js"></script>
+  <script src="./scripts/models/questions.js"></script>
+  <script src="./scripts/models/quiz.js"></script>
+  <script src="./scripts/views/quiz-view.js"></script>
+  <script src="./scripts/models/highscore.js"></script>
+  <script src="./scripts/views/highscore-view.js"></script>
+  <script src="./scripts/views/error-view.js"></script>
+  <script src="./scripts/controllers/routes.js"></script>
+  <script src="./scripts/views/about-us-view.js"></script>
+  <script src="./scripts/controllers/gameController.js"></script>
+
+</body>
+
+</html>

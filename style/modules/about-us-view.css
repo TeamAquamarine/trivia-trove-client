@@ -1,0 +1,13 @@
+#about-us-view section{
+  margin: auto;
+}
+#about-us-view img{
+  max-width: 100%;
+}
+@media only screen and (min-width: 640px) {
+  #about-us-view section{
+    max-width: 30%;
+    margin-left: 2%;
+    float: left;
+  }
+}
