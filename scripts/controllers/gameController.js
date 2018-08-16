@@ -14,7 +14,7 @@ var app = app || {};
       localStorage.questionNumber = 0;
     }
 
-    this.quiz = new module.Quiz(module.Question.all);
+    this.quiz = new module.Quiz(module.Question.all, localStorage.category);
 
     localStorage.currQuiz = JSON.stringify(this.quiz);
 
@@ -25,7 +25,7 @@ var app = app || {};
   }
 
   gameController.continue = function () {
-    this.quiz = new module.Quiz(JSON.parse(localStorage.currQuiz).questions, JSON.parse(localStorage.currQuiz).userScore);
+    this.quiz = new module.Quiz(JSON.parse(localStorage.currQuiz).questions, localStorage.category, JSON.parse(localStorage.currQuiz).userScore);
     console.log(this.quiz);
     module.gameController.questionHtml = module.render('play-template', this.quiz);
     $('#play-view').append(module.gameController.questionHtml);
@@ -53,7 +53,8 @@ var app = app || {};
       if (localStorage.questionNumber == module.gameController.quiz.questions.length) {
         localStorage.removeItem('questionNumber');
         localStorage.removeItem('currQuiz');
-        page('/highscore');
+        module.highscore.finalScore();
+        page('/highscore/win');
       } else {
         $('.answerButton').removeClass('isSelected');
         module.gameController.showQuestion();

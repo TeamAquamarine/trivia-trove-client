@@ -31,6 +31,7 @@ var app = app || {};
 
     $('#play-api-form').on('submit', () => {
       event.preventDefault();
+      localStorage.category = $('#category-select option:selected').text();
       let cat_id = $('#category-select option:selected').val(),
         diff = $('#difficulty-select option:selected').val(),
         amount = $('#question-number-select option:selected').val();
