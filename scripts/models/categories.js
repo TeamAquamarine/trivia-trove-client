@@ -21,6 +21,7 @@ var app = app || {};
 
   Categories.fetchAll = callback => {
     $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/categories`)
+      .then($('#category-select').empty())
       .then(res => Categories.loadAll(res))
       .then(callback)
       .catch(errorCallback);

@@ -20,15 +20,24 @@ nav li {
   list-style-type: none;  
 } 
 
+.icon-menu, .icon-menu3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15%; 
+  margin-top: 3%;
+  font-size: 8vw;
+  color: #228dac;
+}
+
 @media only screen and (min-width: 640px) {
   header section {
     padding: .1em .1em .1em 2em;
     float: none;
   }
  
-  .icon-menu {
-    font-size: 3em;
-    float: right;
+  .icon-menu, .icon-menu3 {
+    display: none;
   }
   
   nav {
@@ -36,7 +45,7 @@ nav li {
     float: left;
     width: 100%;
     clear: both;
-    font-size: 25px;
+    font-size: 20px;
   }
   
   nav a {
