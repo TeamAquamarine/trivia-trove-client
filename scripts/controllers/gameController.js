@@ -43,7 +43,7 @@ var app = app || {};
     if ($('.isSelected').length) {
 
       //If question is answered correctly
-      let isCorrect = $('.isSelected').text().trim() === module.gameController.quiz.questions[localStorage.questionNumber].correct_answer;
+      let isCorrect = $('.isSelected').text().trim() === he.decode(module.gameController.quiz.questions[localStorage.questionNumber].correct_answer);
       if (isCorrect) {
         module.gameController.quiz.incrementScore();
       }
