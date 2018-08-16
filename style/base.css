@@ -6,10 +6,18 @@ yellow #ffael8
 purple #694668
 grey text #414141 */
 
+/* font-family: 'Signika', sans-serif;
+font-family: 'Itim', cursive;
+font-family: 'Averia Serif Libre', cursive; */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   background-color: #fff;
-  font-family: 'helvetica';
   color: #414141;
+  position: relative;
+  font-family: 'Signika', sans-serif;
 }
 
 header {
@@ -20,7 +28,6 @@ header {
 footer {
   max-width: 100%;
   background-color: #414141;
-  position: relative;
 }
 
 button {
@@ -29,4 +36,9 @@ button {
   border-radius: 5px;
   width: 70px;
   height: 30px;
+}
+
+input, textarea, select {
+  width: 98%;
+  padding-left: 2%;
 }
