@@ -10,6 +10,7 @@ var app = app || {};
     module.showOnly('#home-view');
 
     //Add handler for if there is currently a quiz in progress
+    $('#continue').off('click');
     if (localStorage.currQuiz){
       $('#continue').on('click', (event) => {
         event.preventDefault();
