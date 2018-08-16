@@ -14,7 +14,7 @@ var app = app || {};
       localStorage.questionNumber = 0;
     }
 
-    this.quiz = new module.Quiz(module.Question.all);
+    this.quiz = new module.Quiz(module.Question.all, localStorage.category);
 
     localStorage.currQuiz = JSON.stringify(this.quiz);
 
@@ -25,7 +25,7 @@ var app = app || {};
   }
 
   gameController.continue = function () {
-    this.quiz = new module.Quiz(JSON.parse(localStorage.currQuiz).questions, JSON.parse(localStorage.currQuiz).userScore);
+    this.quiz = new module.Quiz(JSON.parse(localStorage.currQuiz).questions, localStorage.category, JSON.parse(localStorage.currQuiz).userScore);
     console.log(this.quiz);
     module.gameController.questionHtml = module.render('play-template', this.quiz);
     $('#play-view').append(module.gameController.questionHtml);
@@ -50,10 +50,17 @@ var app = app || {};
 
       localStorage.questionNumber = JSON.parse(localStorage.questionNumber) + 1;
       localStorage.currQuiz = JSON.stringify(module.gameController.quiz);
+      //end-game logic
       if (localStorage.questionNumber == module.gameController.quiz.questions.length) {
+        $('#form-category').val(localStorage.category);
+        $('#form-category').attr('readonly', 'true');
+        $('#form-score').val(module.gameController.quiz.userScore);
+        $('#form-score').attr('readonly', 'true');
+
         localStorage.removeItem('questionNumber');
         localStorage.removeItem('currQuiz');
-        page('/highscore');
+        module.Highscore.finalScore();
+        page('/highscore/win');
       } else {
         $('.answerButton').removeClass('isSelected');
         module.gameController.showQuestion();
