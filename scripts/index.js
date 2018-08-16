@@ -4,6 +4,10 @@ var app = app || {};
 
 (function (module) {
 
+  $('#hamburger-menu').on('click', () => {
+    $('#navbar').slideToggle(275);
+  })
+
   let prodApiUrl = 'https://secure-oasis-88504.herokuapp.com';
   let devApiUrl = 'http://localhost:3000';
 
