@@ -16,14 +16,16 @@
   <link rel="stylesheet" href="./style/theme.css">
   <link rel="stylesheet" href="./style/state.css">
   <link rel="stylesheet" href="./style/vendor/icons.css">
-  <link rel="stylesheet" href="./style/modules/home-view.css"><link rel="stylesheet" href="./style/modules/about-us-view.css">
+  <link rel="stylesheet" href="./style/modules/home-view.css">
+  <link rel="stylesheet" href="./style/modules/play-view.css">  
+  <link rel="stylesheet" href="./style/modules/about-us-view.css">
   <link rel="stylesheet" href="./style/modules/footer.css">
   <link rel="stylesheet" href="./style/modules/create.css">
   <!-- Application Templates -->
   <script type="text/x-handlebars-template" id="play-template">
     
     <aside id="score">
-      {{userScore}}
+      <h3>Score</h3>{{userScore}}
     </aside>
     {{#list questions}}
       <div id="{{@index}}">
