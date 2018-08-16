@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./style/state.css">
   <link rel="stylesheet" href="./style/vendor/icons.css">
   <link rel="stylesheet" href="./style/modules/home-view.css">
-  <link rel="stylesheet" href="./style/modules/play-view.css">  
+  <link rel="stylesheet" href="./style/modules/play-view.css">
   <link rel="stylesheet" href="./style/modules/about-us-view.css">
   <link rel="stylesheet" href="./style/modules/footer.css">
   <link rel="stylesheet" href="./style/modules/create.css">
@@ -81,11 +81,12 @@
     <section id="error-view" class="container">
 
     </section>
-        <!-- *** HOME VIEW ***-->
+    <!-- *** HOME VIEW ***-->
     <section class="container" id="home-view">
       <aside class="left" class="big-logo"></aside>
 
-      <div id="center"><h3>Play Trivia Trove</h3>
+      <div id="center">
+        <h3>Play Trivia Trove</h3>
         <form id="play-api-form">
           <select id="category-select"></select>
           <select id="difficulty-select">
@@ -102,17 +103,17 @@
         </form>
         <button id="continue">Continue</button>
       </div>
-      <!-- <div id="right">I will put custom dropdown here
+    </section>
+    <!-- <div id="right">I will put custom dropdown here
         <form>
           <select id="custom-select"></select>
           <button type="submit">Submit</button>
         </form>
-    </section> -->
-          <!-- *** PLAY VIEW ***-->
+      *** PLAY VIEW ***-->
     <section class="container" id="play-view">
 
     </section>
-          <!-- *** HIGH SCORE ***-->
+    <!-- *** HIGH SCORE ***-->
     <section class="container" id="highscore-view">
       <table id="highscore">Highscore Table
         <th id="highscore-header">
@@ -161,7 +162,7 @@
         </form>
       </div>
     </section> -->
-              <!-- *** ABOUT US  ***-->
+    <!-- *** ABOUT US  ***-->
     <section class="container" id="about-us-view">
 
       <section id="about-connor">
@@ -231,9 +232,9 @@
   <script src="./scripts/models/highscore.js"></script>
   <script src="./scripts/views/highscore-view.js"></script>
   <script src="./scripts/views/error-view.js"></script>
-  <script src="./scripts/controllers/routes.js"></script>
   <script src="./scripts/views/about-us-view.js"></script>
   <script src="./scripts/controllers/gameController.js"></script>
+  <script src="./scripts/controllers/routes.js"></script>
 
 </body>
 
