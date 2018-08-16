@@ -13,9 +13,11 @@ var app = app || {};
 
   highScoreView.quizComplete = () => {
     module.showOnly('#highscore-view');
+    $('#highscore-view table').hide();
     $('#initials').show();
-    $('#highscore').hide();
-    $('#intials-submit').on('click', console.log('new score'));
+    $('#initials-submit').on('click', function () {
+      
+    })
   }
 
   module.highScoreView = highScoreView;
