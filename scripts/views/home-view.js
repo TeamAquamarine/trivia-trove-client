@@ -9,6 +9,15 @@ var app = app || {};
   homeView.initHomeView = (ctx, next) => {
     module.showOnly('#home-view');
 
+    //Add handler for if there is currently a quiz in progress
+    $('#continue').off('click');
+    if (localStorage.currQuiz){
+      $('#continue').on('click', (event) => {
+        event.preventDefault();
+        page('/continue');
+      })
+    }
+
     //Add function here to populate the options for quiz categories
     module.Categories.all.forEach(category => {
       let $option = `<option value=${category.id}>${category.name}</option>`;
