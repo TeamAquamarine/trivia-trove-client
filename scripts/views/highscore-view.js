@@ -15,8 +15,12 @@ var app = app || {};
     module.showOnly('#highscore-view');
     $('#highscore-view table').hide();
     $('#initials').show();
-    $('#initials-submit').on('click', function () {
-      
+    $('#initials-submit').on('click', function (event) {
+      event.preventDefault();
+      let initials = $('#form-initials').val(),
+        category = $('#form-category').val(),
+        score = $('#form-score').val();
+      page(`/highscore/submit/${initials}/${category}/${score}`);
     })
   }
 

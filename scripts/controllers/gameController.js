@@ -50,10 +50,16 @@ var app = app || {};
 
       localStorage.questionNumber = JSON.parse(localStorage.questionNumber) + 1;
       localStorage.currQuiz = JSON.stringify(module.gameController.quiz);
+      //end-game logic
       if (localStorage.questionNumber == module.gameController.quiz.questions.length) {
+        $('#form-category').val(localStorage.category);
+        $('#form-category').attr('readonly', 'true');
+        $('#form-score').val(module.gameController.quiz.userScore);
+        $('#form-score').attr('readonly', 'true');
+
         localStorage.removeItem('questionNumber');
         localStorage.removeItem('currQuiz');
-        module.highscore.finalScore();
+        module.Highscore.finalScore();
         page('/highscore/win');
       } else {
         $('.answerButton').removeClass('isSelected');
