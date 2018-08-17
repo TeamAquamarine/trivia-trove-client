@@ -8,7 +8,11 @@ var app = app || {};
 
   highScoreView.initHighScore = () => {
     module.showOnly('#highscore-view');
+    $('#highscore').empty();
     $('#initials').hide();
+    
+    module.Highscore.fetchall();
+
   };
 
   highScoreView.quizComplete = () => {
