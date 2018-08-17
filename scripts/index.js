@@ -62,7 +62,6 @@ var app = app || {};
   };
 
   module.render = (templateId, data) => {
-    console.log(`#${templateId}`)
     let template = Handlebars.compile($(`#${templateId}`).text());
 
     return template(data);

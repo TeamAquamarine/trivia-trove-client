@@ -12,7 +12,7 @@ var app = app || {};
   }
 
   Quiz.prototype.incrementScore = function () {
-    this.userScore += 132;
+    this.userScore += 500;
     $('#score').text(this.userScore);
   };
 

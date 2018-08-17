@@ -1,0 +1,20 @@
+#highscore-view h2 {
+  text-align: center;
+}
+
+#highscore-table {
+  text-align: center;
+  max-width: 75%;
+  margin: auto;
+}
+
+#highscore-tbody tr {
+  max-width: 100%;
+  width: 100%;
+}
+
+#highscore-tbody td {
+  width: 10%;
+  border: 1px solid #694668;
+  border-radius: 5px;
+}
