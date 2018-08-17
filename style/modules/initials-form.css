@@ -1,0 +1,25 @@
+#initials input{
+  display: block;
+  border-radius: 5px;
+}
+
+#initials {
+  width:40%;
+  margin: auto;
+}
+
+#form-initials {
+  max-width: 35px;
+}
+
+#form-category {
+  max-width: 280px;
+}
+
+#form-score {
+  max-width: 100px;
+}
+
+#initials label {
+  font-weight: bold;
+}
