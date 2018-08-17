@@ -10,14 +10,16 @@ var app = app || {};
 
   Highscore.all = [];
 
-  Highscore.loadAll = (highscoreArray) => {
-    Highscore.all = [];
-    highscoreArr.forEach(score => Highscore.all.push(new Highscore(score)));
-  }
+  // Highscore.loadAll = (highscoreArray) => Highscore.all = highscoreArray
+  //     .sort((a, b) => a.score - b.score)
+  //     .map(score => new Highscore(score));
 
-  Highscore.fetchall = () => {
+  Highscore.fetchall = (callback) => {
     $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/highscores`)
-      .then(results => console.log(results));
+      .then(results => Highscore.all = results)
+      .then(callback)
+      .catch(err => console.error(err));
+
   }
 
   Highscore.postHighscore = function (ctx) {
@@ -36,6 +38,7 @@ var app = app || {};
   Highscore.finalScore = function () {
     localStorage.finalScore = module.gameController.quiz.userScore;
   }
+
   module.Highscore = Highscore;
 
 })(app);
