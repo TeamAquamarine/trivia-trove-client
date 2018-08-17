@@ -1,12 +1,12 @@
-/* footer ul {  
+footer ul {  
   position: absolute;
   top: 20px; 
-  right: 30%;
-} */
+  right: 10%;
+}
 
 footer li {
   display: inline;
-  float: left;
+  padding-left: 10px;
   
 }
 

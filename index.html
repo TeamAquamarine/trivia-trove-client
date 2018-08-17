@@ -25,8 +25,8 @@
   <!-- Application Templates -->
   <script type="text/x-handlebars-template" id="play-template">
     
-    <aside id="score">
-      <h3>Score</h3>{{userScore}}
+    <aside id="score-aside">
+      <h3>Score</h3><span id="score" >{{userScore}}</span>
     </aside>
     <div id="question-wrapper">
     {{#list questions}}

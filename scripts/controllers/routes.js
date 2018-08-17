@@ -13,5 +13,6 @@ page('/highscore', () => app.highScoreView.initHighScore());
 page('/highscore/win', () => app.highScoreView.quizComplete());
 page('/highscore/submit/:initials/:category/:score', (ctx) => app.Highscore.postHighscore(ctx));
 page('/create', () => app.showOnly('#create-view'));
+
 page();
 

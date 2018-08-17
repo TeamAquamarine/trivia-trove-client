@@ -29,6 +29,7 @@ var app = app || {};
       score: ctx.params.score
     }
     $.post(`${module.ENVIRONMENT.apiUrl}/api/v1/highscores`, highscore)
+      .then(() => localStorage.removeItem('finalScore'))
       .then(() => page('/highscore'))
       .catch(err => console.error(err));
   }
