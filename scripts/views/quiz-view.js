@@ -8,8 +8,8 @@ var app = app || {};
 
   quizView.initQuizView = () => {
     $('#play-view').empty();
+    $('#play-api-form').off('submit');
     module.showOnly('#play-view');
-    
     module.gameController.createQuiz();
     //TODO: change specificity once submit button is added
     $('.answerButton').on("click", function (event) {
@@ -37,7 +37,8 @@ var app = app || {};
       $(this).addClass('isSelected');
     });
 
-    $('#play-view button[type="submit"]').on('click', function (event) {    event.preventDefault();
+    $('#play-view button[type="submit"]').on('click', function (event) {    
+      event.preventDefault();
       
       module.gameController.gameLogic();
     })
