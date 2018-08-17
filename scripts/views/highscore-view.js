@@ -8,6 +8,8 @@ var app = app || {};
 
   highScoreView.initHighScore = () => {
     module.showOnly('#highscore-view');
+    //prevents duplicate submission errors the next time
+    $('#initials-submit').off('click');
     $('#initials').hide();
   };
 
@@ -20,6 +22,7 @@ var app = app || {};
       let initials = $('#form-initials').val(),
         category = $('#form-category').val(),
         score = $('#form-score').val();
+
       page(`/highscore/submit/${initials}/${category}/${score}`);
     })
   }
