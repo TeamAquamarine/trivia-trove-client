@@ -8,7 +8,20 @@ var app = app || {};
 
   highScoreView.initHighScore = () => {
     module.showOnly('#highscore-view');
+    $('#highscore-tbody').empty();
+    //prevents duplicate submission errors the next time
+    $('#initials-submit').off('click');
     $('#initials').hide();
+    
+    module.Highscore.fetchall(() => {
+      console.log('hi');
+      let tableData = module.render('highscore-template', module.Highscore.all);
+      $('#highscore-tbody').append(tableData);
+      $('#highscore-table').show();
+      console.log(module.Highscore.all);
+      
+    });
+
   };
 
   highScoreView.quizComplete = () => {
@@ -20,6 +33,7 @@ var app = app || {};
       let initials = $('#form-initials').val(),
         category = $('#form-category').val(),
         score = $('#form-score').val();
+
       page(`/highscore/submit/${initials}/${category}/${score}`);
     })
   }
