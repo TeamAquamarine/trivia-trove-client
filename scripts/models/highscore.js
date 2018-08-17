@@ -16,7 +16,7 @@ var app = app || {};
 
   Highscore.fetchall = (callback) => {
     $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/highscores`)
-      .then(results => highscore.all = results)
+      .then(results => Highscore.all = results)
       .then(callback)
       .catch(err => console.error(err));
 
@@ -29,6 +29,7 @@ var app = app || {};
       score: ctx.params.score
     }
     $.post(`${module.ENVIRONMENT.apiUrl}/api/v1/highscores`, highscore)
+      .then(() => localStorage.removeItem('finalScore'))
       .then(() => page('/highscore'))
       .catch(err => console.error(err));
   }
