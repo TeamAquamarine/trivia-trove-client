@@ -1,11 +1,11 @@
-/* #play-view {
+#play-view {
   margin-top: 30px;
   
   margin-left: 25%;
   float: left;
   clear: both;
   align-content: center;
-} */
+}
 
 #play-view h3 {
   text-align: center;
@@ -20,6 +20,7 @@
   min-width: 50%;
 
 }
+
 #submit-answer {
   position: relative;
   left: 12%;
@@ -29,24 +30,24 @@
 #play-view ul{
   list-style: none;
 }
+
 #play-view {
   float: left;
   clear: both;
   text-align: center;
-}
-#play-view {
   margin-bottom: 30px;
   float: left;
-
 }
+
+
 #question-wrapper{
   position: relative;
   left: 25%;
-  max-width: 40%;
+  max-width: 70%;
   align-content: center;
- 
 }
-aside{
+ 
+#play-view aside{
   max-height: 30px;
   max-width: 30px;
   position: absolute;
