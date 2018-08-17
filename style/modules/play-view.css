@@ -1,29 +1,24 @@
 #play-view {
   margin-top: 30px;
-  
   margin-left: 25%;
   float: left;
   clear: both;
   align-content: center;
 }
 
-#play-view h3 {
+.answerButton {
   text-align: center;
-}
-
-#play-view button{
-  text-align: center;
-  margin-top: 1em;
+  margin: 1em auto 0em;
   display: block;
   font-size: 16px;
   width: 100%;
   min-width: 50%;
-
 }
 
 #submit-answer {
   position: relative;
-  left: 12%;
+  width: 100%;
+  margin: auto;
   background-color:#414141;
 }
 
@@ -35,8 +30,9 @@
   float: left;
   clear: both;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
   float: left;
+  width: 100%;
 }
 
 
@@ -46,8 +42,13 @@
   max-width: 70%;
   align-content: center;
 }
+
+#question-box {
+  text-align: center;
+  width: 100%;
+}
  
-#play-view aside{
+#score-aside{
   max-height: 30px;
   max-width: 30px;
   position: absolute;

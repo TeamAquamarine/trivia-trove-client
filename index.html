@@ -31,11 +31,11 @@
     <div id="question-wrapper">
     {{#list questions}}
       <div id="{{@index}}">
-        <h3>
+        <h3 class="question-box">
           {{{question}}}
         </h3>
         {{#answers possibleAnswers}}
-            {{{this}}}
+            <span class='answer-button'>{{{this}}}</span>
         {{/answers}}
       </div>
     {{/list}}
@@ -68,9 +68,6 @@
         <li id="home">
           <a href="./">HOME</a>
         </li>
-        <li id="create">
-          <a href="./create">CREATE</a>
-        </li>
         <li id="highscore">
           <a href="./highscore">HIGHSCORE</a>
         </li>
@@ -99,6 +96,7 @@
             <option value="hard">Hard</option>
           </select>
           <select id="question-number-select">
+            <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
             <option value="20">20</option>
